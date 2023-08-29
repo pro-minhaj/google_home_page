@@ -62,31 +62,35 @@ section .main{
 .google img{
     width: 100%;
 }
-section .main .searchbox{
+.searchbox{
     position: relative;
-    width: 40%;
+    width: 50%;
     margin-top: 20px;
 }
-section .main .searchbox .search{
-    width: 100%;
-    padding: 13px 50px;
+.search{
+    width: 80%;
     border-radius: 30px;
     border: 1px solid #ccc;
     outline: none;
-    font-size: 16px;
-    
+    font-size: 20px;
+    padding: 10px 40px;
 }
-section .main .searchbox .icons{
+.search:focus{
+    border-color: rgba(28, 4, 241, 0.4);
+}
+.icons{
     position: absolute;
     top: 0;
-    width: 100%;
+    width: 88%;
     display: flex;
-    padding: 12px 30px;
     justify-content: space-between;
     align-items: center;
     pointer-events: none;
 }
 
+.icons img{
+    padding: 10px;
+}
 section .main .buttons{
     margin-top: 20px;
 }
@@ -105,9 +109,6 @@ section .main .buttons button:hover{
 }
 section .main .lang{
     margin-top: 20px;
-}
-.mic{
-    margin-right: -40px;
 }
 footer{
     background: #f2f2f2;
@@ -133,17 +134,40 @@ footer .row ul li a{
 
 /* Mobail Responsiv */
 
+@media (max-width:1200px){
+    section{
+        width: 100%;
+    }
+    .google{
+        width: 25%;
+    }
+    .searchbox{
+        width: 60%;
+    }
+    .icons{
+        width: 91%;
+    }
+}
+
 @media (max-width:768px){
     section .main .searchbox{
         width: 80%;
     }
     .google{
-        width: 32%;
+        width: 40%;
     }
     footer .row{
         justify-content: center;
     }
 }
 @media (max-width:576px){
-
+    section{
+        width: 100%;
+    }
+    .google{
+        width: 50%;
+    }
+    .icons{
+        width: 98%;
+    }
 }
